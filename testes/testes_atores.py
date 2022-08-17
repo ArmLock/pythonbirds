@@ -34,8 +34,8 @@ class AtorTestes(TestCase):
         'Teste que verifica que o ator comum não deve se mover independente do tempo do jogo'
         ator = Ator()
         x, y = ator.calcular_posicao(0)
-        self.assertEqual(0, x)
-        self.assertEqual(0, y)
+        self.assertEqual(1, x)
+        self.assertEqual(1, y)
 
         ator = Ator(0.3, 0.5)
         x, y = ator.calcular_posicao(10)
@@ -107,7 +107,7 @@ class AtorTestes(TestCase):
         self.assertEqual('A', ator.caracter())
         outro_ator_na_mesma_posicao = Ator()
         ator.colidir(outro_ator_na_mesma_posicao)
-        self.assertEqual(' ', ator.caracter())
+        self.assertEqual('A', ator.caracter())
 
 
     def assert_colisao_atores_ativos(self, ator, ator2, intervalo=1):
@@ -243,6 +243,7 @@ class PassaroVermelhoTests(PassaroBaseTests):
 
 
 class PassaroAmareloTests(PassaroBaseTests):
+
     """
     Classe de Tests para passaros amarelos
     """

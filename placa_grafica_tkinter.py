@@ -147,6 +147,7 @@ if __name__ == '__main__':
     porcos = [Porco(750, 1), Porco(700, 1)]
     obstaculos = [Obstaculo(310, 100)]
 
+
     fase.adicionar_obstaculo(*obstaculos)
     fase.adicionar_passaro(*passaros)
     fase.adicionar_porco(*porcos)
